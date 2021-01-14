@@ -3,10 +3,12 @@ import './App.css';
 
 import MainPage from './components/MainPage';
 import Aboutpage from  './components/Aboutpage';
+import HeaderComponent from './components/HeaderComponent';
 
 function App() {
   return (
     <div className="App">
+    <HeaderComponent />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

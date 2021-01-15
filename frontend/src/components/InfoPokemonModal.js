@@ -1,6 +1,7 @@
 import React from "react";
+import img from "../img/pokecharmnader.png";
 
-const AboutModal = () => {
+const InfoPokemonModal = () => {
   return (
     <div
       className="modal fade"
@@ -24,26 +25,42 @@ const AboutModal = () => {
                 ></i>
               </span>
             </a>
-          </div>
+            </div>
           <div className="modal-body">
-
             <div>
-              <h1 className="display-1">PokéAPIMania</h1>
-              <p className="lead mb-md-3">
-                The Pokémon Términos de uso Aviso sobre la privacidad Página de
-                Cookies Información legal ©2021 Pokémon
+              <h7 className="display-1"></h7>
+               <p className="lead mb-md-1">
+               CHARMANDER
+              </p>
+              <hr className="bg-light" />
+            </div>
+            <div className="modal-body">
+            <div>
+              <h7 className="display-1"></h7>
+               <p className="lead mb-md-1">
+               Este Pokémon nace con una llama en la punta de la cola.
+               Prefiere las cosas calientes.
+               Dicen que cuando llueve le sale vapor de la punta de la cola.
+               Si la llama se apagara, el Pokémon se debilitaría. "
               </p>
               <hr className="bg-light" />
             </div>
             <div>
-              <h1 className="display-2">PokéAPIMania</h1>
-              <p className="lead mb-md-3">
-                Brandon Ruiz Morales Juan Alejandro Rendon Lucio Erick Osvaldo
-                Carreon Rivera Tere Griselda Valadez Hernandez
+              <h7 className="display-1"></h7>
+               <p className="lead mb-md-1">
+               Categoria | Fuego 
               </p>
               <hr className="bg-light" />
             </div>
-            
+            <div>
+              <h7 className="display-1"></h7>
+               <p className="lead mb-md-1">
+               Evolucion | Charmeleon
+              </p>
+              <hr className="bg-light" />
+            </div>
+              <hr className="bg-light" />
+            </div>           
           </div>
           <div className="modal-footer">
             <button
@@ -60,4 +77,4 @@ const AboutModal = () => {
   );
 };
 
-export default AboutModal;
+export default InfoPokemonModal;

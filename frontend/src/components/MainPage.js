@@ -2,6 +2,9 @@ import React from "react";
 import SearchModal from "./SearchModal";
 import AboutModal from './AboutModal';
 import InfoPokemonModal from './InfoPokemonModal';
+import TyposModal from './TypeosModal';
+import ContactModal from './ContactModal';
+import UploadPokemon from './UploadPokemon';
 
 const MainPage = () => {
   return (
@@ -31,7 +34,7 @@ const MainPage = () => {
             type="button"
             className="btn btn-outline-light mb-2 mb-sm-0 mx-1"
             data-bs-toggle="modal"
-            data-bs-target="#nosotros"
+            data-bs-target="#typosmodal"
           >
             Tipos
           </button>
@@ -39,7 +42,7 @@ const MainPage = () => {
             type="button"
             className="btn btn-outline-light mb-2 mb-sm-0 mx-1"
             data-bs-toggle="modal"
-            data-bs-target="#productos"
+            data-bs-target="#uploadmodal"
           >
             Subir
           </button>
@@ -65,6 +68,9 @@ const MainPage = () => {
     <SearchModal />
     <AboutModal />
     <InfoPokemonModal />
+    <TyposModal />
+    <ContactModal />
+    <UploadPokemon />
     </div>
   );
 };

@@ -12,7 +12,8 @@ public interface PokemoRepository {
 
     Optional<Pokemon> getPokemon(int pokemonId);
 
-    Optional<Pokemon> getByType(int idTipo);
+    Optional<Pokemon> getByType(int pokemonType);
+    Optional<Pokemon> getByName(String pokemonName);
     Pokemon save(Pokemon pokemon);
 
     void delete(int pokemonId);

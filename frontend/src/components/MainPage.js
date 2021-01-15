@@ -58,7 +58,7 @@ const MainPage = () => {
             type="button"
             className="btn btn-outline-light mb-2 mb-sm-0 mx-1"
             data-bs-toggle="modal"
-            data-bs-target="#infopokemodal"
+            data-bs-target="#contactmodal"
           >
             Contacto
           </button>

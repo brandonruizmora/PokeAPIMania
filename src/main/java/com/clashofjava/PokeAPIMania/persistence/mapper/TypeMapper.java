@@ -1,7 +1,6 @@
 package com.clashofjava.PokeAPIMania.persistence.mapper;
 
 import com.clashofjava.PokeAPIMania.domain.service.TypeService;
-import com.clashofjava.PokeAPIMania.domain.service.TypeService;
 import com.clashofjava.PokeAPIMania.persistence.entity.Tipo;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;

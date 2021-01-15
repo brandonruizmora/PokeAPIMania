@@ -7,10 +7,9 @@ const Aboutpage = () => {
           <p className="lead mb-md-3">
             The Pokémon 
         
-            Términos de uso
-            Aviso sobre la privacidad
-            Página de Cookies
-            Información legal
+            Politicas de Privacidad  |   Términos de uso
+           
+            
             ©2021 Pokémon
 
           </p>
@@ -20,6 +19,8 @@ const Aboutpage = () => {
         <div> 
           <h1 className="display-2">PokéAPIMania</h1>
           <p className="lead mb-md-3">
+            Autores
+
             Brandon Ruiz Morales
             Juan Alejandro Rendon Lucio
             Erick Osvaldo Carreon Rivera

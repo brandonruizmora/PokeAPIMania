@@ -1,0 +1,19 @@
+.fondo {
+  background: url("./img/poke2.jpg");
+
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.alto {
+  height: 100vh;
+}
+
+.colorT {
+  color: tomato;
+}
+
+.colorB {
+  color: black;
+}

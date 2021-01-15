@@ -8,6 +8,6 @@ import java.util.Optional;
 
 public interface PokemonCrudRepository extends CrudRepository<Pokemon, Integer>{
 
-    Optional<List<Pokemon>> findByIdPokemon(String pokemonId);
-    Optional<List<Pokemon>> findByName (String pokemonName);
+    Optional<List<Pokemon>> findByIdPokemon(String idPokemon);
+    Optional<List<Pokemon>> findByName (String nombrePokemon);
 }

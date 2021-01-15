@@ -1,6 +1,6 @@
-package com.clashofjava.PokeAPIMania.domain.service;
+package com.clashofjava.PokeAPIMania.domain;
 
-public class TypeService {
+public class Type {
     private int typeId;
     private String typeName;
 

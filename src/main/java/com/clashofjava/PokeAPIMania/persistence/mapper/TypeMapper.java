@@ -1,6 +1,6 @@
 package com.clashofjava.PokeAPIMania.persistence.mapper;
 
-import com.clashofjava.PokeAPIMania.domain.service.TypeService;
+import com.clashofjava.PokeAPIMania.domain.Type;
 import com.clashofjava.PokeAPIMania.persistence.entity.Tipo;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
@@ -14,10 +14,10 @@ public interface TypeMapper {
             @Mapping(source = "idTipo",target = "typeId"),
             @Mapping(source = "nombreTipo",target = "typeName")
     })
-    TypeService toType(Tipo tipo);
+    Type toType(Tipo tipo);
 
 
     @InheritInverseConfiguration
     @Mapping(target = "evolucion", ignore = true)
-    Tipo toTipo(TypeService type);
+    Tipo toTipo(Type type);
 }

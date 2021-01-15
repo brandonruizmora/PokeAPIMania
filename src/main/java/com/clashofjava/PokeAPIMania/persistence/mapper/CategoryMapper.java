@@ -1,6 +1,6 @@
 package com.clashofjava.PokeAPIMania.persistence.mapper;
 
-import com.clashofjava.PokeAPIMania.domain.service.CategoryService;
+import com.clashofjava.PokeAPIMania.domain.Category;
 import com.clashofjava.PokeAPIMania.persistence.entity.Categoria;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
@@ -13,9 +13,9 @@ public interface CategoryMapper {
             @Mapping(source = "idCategoria",target = "categoryId"),
             @Mapping(source = "categoria",target = "category")
     })
-    CategoryService toCategory(Categoria categoria);
+    Category toCategory(Categoria categoria);
 
     @InheritInverseConfiguration
     @Mapping(target = "evolucion", ignore = true)
-    Categoria toCategoria(CategoryService category);
+    Categoria toCategoria(Category category);
 }

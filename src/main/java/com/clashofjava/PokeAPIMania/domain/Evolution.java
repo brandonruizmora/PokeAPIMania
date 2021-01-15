@@ -1,15 +1,12 @@
 package com.clashofjava.PokeAPIMania.domain;
 
-import com.clashofjava.PokeAPIMania.persistence.entity.Categoria;
-import com.clashofjava.PokeAPIMania.persistence.entity.Tipo;
-
 public class Evolution {
     private int evolutionId;
-    private String nameEvolution;
+    private String evolutionName;
     private boolean evolution;
     private int typeId;
-    private Tipo type;
-    private Categoria category;
+    private int categoryId;
+    private Type type;
 
     public int getEvolutionId() {
         return evolutionId;
@@ -19,12 +16,12 @@ public class Evolution {
         this.evolutionId = evolutionId;
     }
 
-    public String getNameEvolution() {
-        return nameEvolution;
+    public String getEvolutionName() {
+        return evolutionName;
     }
 
-    public void setNameEvolution(String nameEvolution) {
-        this.nameEvolution = nameEvolution;
+    public void setEvolutionName(String evolutionName) {
+        this.evolutionName = evolutionName;
     }
 
     public boolean isEvolution() {
@@ -43,19 +40,19 @@ public class Evolution {
         this.typeId = typeId;
     }
 
-    public Tipo getType() {
+    public int getCategoryId() {
+        return categoryId;
+    }
+
+    public void setCategoryId(int categoryId) {
+        this.categoryId = categoryId;
+    }
+
+    public Type getType() {
         return type;
     }
 
-    public void setType(Tipo type) {
+    public void setType(Type type) {
         this.type = type;
-    }
-
-    public Categoria getCategory() {
-        return category;
-    }
-
-    public void setCategory(Categoria category) {
-        this.category = category;
     }
 }

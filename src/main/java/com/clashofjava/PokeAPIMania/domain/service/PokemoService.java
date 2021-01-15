@@ -25,6 +25,10 @@ public class PokemoService {
         return pokemoRepository.getByType(idTipo);
     }
 
+  /*  public Optional<Pokemon> getByName(String pokemonName){
+        return pokemoRepository.getByName(String pokemonName);
+    } */
+
     public Pokemon save(Pokemon pokemon){
         return pokemoRepository.save(pokemon);
     }

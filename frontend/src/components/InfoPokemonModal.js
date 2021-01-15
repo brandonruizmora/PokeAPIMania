@@ -1,5 +1,4 @@
 import React from "react";
-import img from "../img/pokecharmnader.png";
 
 const InfoPokemonModal = () => {
   return (

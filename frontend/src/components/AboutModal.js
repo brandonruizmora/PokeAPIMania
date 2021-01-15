@@ -1,10 +1,10 @@
 import React from "react";
 
-const SearchModal = () => {
+const AboutModal = () => {
   return (
     <div
       className="modal fade"
-      id="searchmodal"
+      id="aboutmodal"
       tabindex="-1"
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
@@ -13,7 +13,7 @@ const SearchModal = () => {
         <div className="modal-content bg-dark text-light">
           <div className="modal-header">
             <h5 className="modal-title display-4" id="contactoLabel">
-              Busca a tu amigo pokémon
+              Nosotros
             </h5>
             <a type="button" data-bs-dismiss="modal" aria-label="Close">
               <span className="fa-layers fa-fw">
@@ -26,18 +26,20 @@ const SearchModal = () => {
             </a>
           </div>
           <div className="modal-body">
-            <div className="row">
-              <div className="col-md-12 mb-3 mb-0">
-                <form>
-                  <div className="mb-3 d-flex">
-                    <input type="text" className="form-control" />
-                    <button className="btn btn-outline-light ms-1">
-                      <i className="fas fa-search"></i>
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
+            <h1 className="display-1">PokéAPIMania</h1>
+            <p className="lead mb-md-3">
+              The Pokémon Términos de uso Aviso sobre la privacidad Página de
+              Cookies Información legal ©2021 Pokémon
+            </p>
+            <hr className="bg-light" />
+          </div>
+          <div>
+            <h1 className="display-2">PokéAPIMania</h1>
+            <p className="lead mb-md-3">
+              Brandon Ruiz Morales Juan Alejandro Rendon Lucio Erick Osvaldo
+              Carreon Rivera Tere Griselda Valadez Hernandez
+            </p>
+            <hr className="bg-light" />
           </div>
           <div className="modal-footer">
             <button
@@ -54,4 +56,4 @@ const SearchModal = () => {
   );
 };
 
-export default SearchModal;
+export default AboutModal;

@@ -1,4 +1,5 @@
 import React from "react";
+import img from "../img/poke7.jpg";
 
 const AboutModal = () => {
   return (
@@ -12,9 +13,9 @@ const AboutModal = () => {
       <div className="modal-dialog modal-lg modal-dialog-centered">
         <div className="modal-content bg-dark text-light">
           <div className="modal-header">
-            <h5 className="modal-title display-4" id="contactoLabel">
+            <h1 className="modal-title display-4" id="contactoLabel">
               Nosotros
-            </h5>
+            </h1>
             <a type="button" data-bs-dismiss="modal" aria-label="Close">
               <span className="fa-layers fa-fw">
                 <i className="fas fa-circle colorT"></i>
@@ -24,26 +25,28 @@ const AboutModal = () => {
                 ></i>
               </span>
             </a>
-          </div>
+          </div>          
           <div className="modal-body">
-
             <div>
-              <h1 className="display-1">PokéAPIMania</h1>
+              <h2 className="display-1">PokéAPIMania</h2>
               <p className="lead mb-md-3">
-                The Pokémon Términos de uso Aviso sobre la privacidad Página de
-                Cookies Información legal ©2021 Pokémon
+              
               </p>
-              <hr className="bg-light" />
-            </div>
-            <div>
-              <h1 className="display-2">PokéAPIMania</h1>
-              <p className="lead mb-md-3">
-                Brandon Ruiz Morales Juan Alejandro Rendon Lucio Erick Osvaldo
-                Carreon Rivera Tere Griselda Valadez Hernandez
-              </p>
-              <hr className="bg-light" />
-            </div>
-            
+            </div>           
+            <div className="col-md-6">
+                <img src={img} alt="..." className="img-fluid rounded" />
+                <h5 className="fw-light mt-2">The Pokémon </h5>
+                <h5 className="fw-light mt-2">Términos de uso | Aviso sobre la privacidad </h5>
+                <h5 className="fw-light mt-2">Página de Cookies | Información legal </h5>
+                <h5 className="fw-light"> ©2021 Pokémon</h5>
+                <h5 className="fw-light mt-2"></h5>
+                <h5 className="fw-light mt-2">Brandon Ruiz Morales</h5>
+                <h5 className="fw-light mt-2">Juan Alejandro Rendon Lucio</h5>
+                <h5 className="fw-light mt-2">Erick Osvaldo Carreon Rivera</h5>
+                <h5 className="fw-light mt-2">Tere Griselda Valadez Hernandez</h5>
+                <h5 className="fw-light">
+                </h5>
+              </div>
           </div>
           <div className="modal-footer">
             <button

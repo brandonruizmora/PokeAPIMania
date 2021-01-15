@@ -1,6 +1,6 @@
-package com.clashofjava.PokeAPIMania.domain.service;
+package com.clashofjava.PokeAPIMania.domain;
 
-public class CategoryService {
+public class Category {
     private int categoryId;
     private String category;
 

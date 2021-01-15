@@ -1,12 +1,12 @@
-package com.clashofjava.PokeAPIMania.domain.service;
+package com.clashofjava.PokeAPIMania.domain;
 
-public class EvolutionService {
+public class Evolution {
     private int evolutionId;
     private String evolutionName;
     private boolean evolution;
     private int typeId;
     private int categoryId;
-    private TypeService type;
+    private Type type;
 
     public int getEvolutionId() {
         return evolutionId;
@@ -48,11 +48,11 @@ public class EvolutionService {
         this.categoryId = categoryId;
     }
 
-    public TypeService getType() {
+    public Type getType() {
         return type;
     }
 
-    public void setType(TypeService type) {
+    public void setType(Type type) {
         this.type = type;
     }
 }

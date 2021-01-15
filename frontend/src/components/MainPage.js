@@ -1,6 +1,7 @@
 import React from "react";
 import SearchModal from "./SearchModal";
 import AboutModal from './AboutModal';
+import InfoPokemonModal from './InfoPokemonModal';
 
 const MainPage = () => {
   return (
@@ -54,7 +55,7 @@ const MainPage = () => {
             type="button"
             className="btn btn-outline-light mb-2 mb-sm-0 mx-1"
             data-bs-toggle="modal"
-            data-bs-target="#contacto"
+            data-bs-target="#infopokemodal"
           >
             Contacto
           </button>
@@ -63,6 +64,7 @@ const MainPage = () => {
     </div>
     <SearchModal />
     <AboutModal />
+    <InfoPokemonModal />
     </div>
   );
 };

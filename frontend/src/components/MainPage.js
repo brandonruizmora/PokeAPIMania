@@ -1,7 +1,9 @@
 import React from "react";
+import SearchModal from "./SearchModal";
 
 const MainPage = () => {
   return (
+    <div>
     <div className="container-fluid fondo">
       <div className="row alto align-items-center justify-content-center text-center text-light">
         <div className="col-md-8">
@@ -19,7 +21,7 @@ const MainPage = () => {
             type="button"
             className="btn btn-outline-light mb-2 mb-sm-0 mx-1"
             data-bs-toggle="modal"
-            data-bs-target="#home"
+            data-bs-target="#buscarPokemon"
           >
             Pokémones
           </button>
@@ -49,6 +51,8 @@ const MainPage = () => {
           </button>
         </div>
       </div>
+    </div>
+    <SearchModal />
     </div>
   );
 };

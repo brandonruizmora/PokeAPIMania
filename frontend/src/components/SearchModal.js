@@ -37,6 +37,36 @@ const SearchModal = () => {
                   </div>
                 </form>
               </div>
+              <div className="col-md-12 mb-3 mb-0">
+                <div class="list-group">
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action active"
+                    aria-current="true"
+                    data-bs-toggle="modal"
+                    data-bs-target="#infopokemodal"
+                  >
+                    Charmander
+                  </a>
+                  <a href="#" class="list-group-item list-group-item-action">
+                    Dapibus ac facilisis in
+                  </a>
+                  <a href="#" class="list-group-item list-group-item-action">
+                    Morbi leo risus
+                  </a>
+                  <a href="#" class="list-group-item list-group-item-action">
+                    Porta ac consectetur ac
+                  </a>
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action disabled"
+                    tabindex="-1"
+                    aria-disabled="true"
+                  >
+                    Vestibulum at eros
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
           <div className="modal-footer">

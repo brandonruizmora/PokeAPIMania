@@ -1,22 +1,21 @@
 package com.clashofjava.PokeAPIMania.persistence.entity;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
-@Table(name="pokemon")
+@Table(name = "pokemones")
 public class Pokemon {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id_pokemon")
+    @Column(name = "id_pokemon")
     private Integer idPokemon;
 
-    @Column(name="nombre_pokemon")
-    private String nombrePokemon;
+    private String pokemon;
 
-    @OneToMany(mappedBy = "pokemon")
-    private List<TipoPokemon> tipoPokemon;
+    private String detalle;
+
+    private Boolean evolucion;
 
     public Integer getIdPokemon() {
         return idPokemon;
@@ -26,19 +25,27 @@ public class Pokemon {
         this.idPokemon = idPokemon;
     }
 
-    public String getNombrePokemon() {
-        return nombrePokemon;
+    public String getPokemon() {
+        return pokemon;
     }
 
-    public void setNombrePokemon(String nombrePokemon) {
-        this.nombrePokemon = nombrePokemon;
+    public void setPokemon(String pokemon) {
+        this.pokemon = pokemon;
     }
 
-    public List<TipoPokemon> getTipoPokemon() {
-        return tipoPokemon;
+    public String getDetalle() {
+        return detalle;
     }
 
-    public void setTipoPokemon(List<TipoPokemon> tipoPokemon) {
-        this.tipoPokemon = tipoPokemon;
+    public void setDetalle(String detalle) {
+        this.detalle = detalle;
+    }
+
+    public Boolean getEvolucion() {
+        return evolucion;
+    }
+
+    public void setEvolucion(Boolean evolucion) {
+        this.evolucion = evolucion;
     }
 }

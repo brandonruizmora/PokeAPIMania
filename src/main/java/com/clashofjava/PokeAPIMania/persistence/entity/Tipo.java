@@ -3,8 +3,10 @@ package com.clashofjava.PokeAPIMania.persistence.entity;
 import javax.persistence.*;
 import java.util.List;
 
+import javax.persistence.*;
+
 @Entity
-@Table(name = "tipo")
+@Table(name = "tipos")
 public class Tipo {
 
     @Id
@@ -12,11 +14,9 @@ public class Tipo {
     @Column(name = "id_tipo")
     private Integer idTipo;
 
-    @Column(name = "nombre_tipo")
-    private String nombreTipo;
+    private String tipo;
 
-    @OneToMany(mappedBy = "tipo")
-    private List<Evolucion> evolucion;
+    private String detalle;
 
     public Integer getIdTipo() {
         return idTipo;
@@ -26,19 +26,19 @@ public class Tipo {
         this.idTipo = idTipo;
     }
 
-    public String getNombreTipo() {
-        return nombreTipo;
+    public String getTipo() {
+        return tipo;
     }
 
-    public void setNombreTipo(String nombreTipo) {
-        this.nombreTipo = nombreTipo;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
-    public List<Evolucion> getEvolucion() {
-        return evolucion;
+    public String getDetalle() {
+        return detalle;
     }
 
-    public void setEvolucion(List<Evolucion> evolucion) {
-        this.evolucion = evolucion;
+    public void setDetalle(String detalle) {
+        this.detalle = detalle;
     }
 }

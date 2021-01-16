@@ -1,6 +1,6 @@
 package com.clashofjava.PokeAPIMania.domain;
 
-public class Pokimon {
+public class Pokemon {
 
     private int pokemonId;
     private String pokemon;

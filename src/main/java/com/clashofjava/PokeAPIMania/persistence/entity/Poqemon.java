@@ -5,7 +5,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "pokemones")
-public class Pokemon {
+public class Poqemon {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

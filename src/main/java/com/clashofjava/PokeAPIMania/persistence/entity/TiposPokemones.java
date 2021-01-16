@@ -18,7 +18,7 @@ public class TiposPokemones {
     @ManyToOne
     @MapsId("idPokemon")
     @JoinColumn(name = "id_pokemon", insertable = false, updatable = false)
-    private Pokemon pokemon;
+    private Poqemon poqemon;
 
     public Integer getIdTipoPrimario() {
         return idTipoPrimario;
@@ -36,11 +36,11 @@ public class TiposPokemones {
         this.idTipoSecundario = idTipoSecundario;
     }
 
-    public Pokemon getPokemon() {
-        return pokemon;
+    public Poqemon getPoqemon() {
+        return poqemon;
     }
 
-    public void setPokemon(Pokemon pokemon) {
-        this.pokemon = pokemon;
+    public void setPoqemon(Poqemon poqemon) {
+        this.poqemon = poqemon;
     }
 }

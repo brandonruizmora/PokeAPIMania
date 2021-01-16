@@ -9,6 +9,7 @@ import org.mapstruct.Mappings;
 
 @Mapper(componentModel = "spring")
 public interface PokemonsMapper {
+    
     @Mappings({
             @Mapping(source = "idPokemon", target = "pokemonId"),
             @Mapping(source = "pokemon", target = "pokemon"),

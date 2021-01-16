@@ -1,7 +1,5 @@
 package com.clashofjava.PokeAPIMania.domain.repository;
 
-import com.clashofjava.PokeAPIMania.domain.Pokemon;
-
 import java.util.List;
 import java.util.Optional;
 

@@ -1,7 +1,6 @@
 package com.clashofjava.PokeAPIMania.domain.service;
 
 
-import com.clashofjava.PokeAPIMania.domain.Pokemon;
 import com.clashofjava.PokeAPIMania.domain.repository.PokemoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

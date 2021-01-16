@@ -1,6 +1,5 @@
 package com.clashofjava.PokeAPIMania.persistence.crud;
 
-import com.clashofjava.PokeAPIMania.persistence.entity.Pokemon;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

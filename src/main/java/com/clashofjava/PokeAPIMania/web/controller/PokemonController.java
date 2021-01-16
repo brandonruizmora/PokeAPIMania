@@ -1,7 +1,6 @@
 package com.clashofjava.PokeAPIMania.web.controller;
 
 
-import com.clashofjava.PokeAPIMania.domain.Pokemon;
 import com.clashofjava.PokeAPIMania.domain.service.PokemoService;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;

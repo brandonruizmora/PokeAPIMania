@@ -40,7 +40,6 @@ public class PokemonRepositorio implements PokemonRepository {
         return mapper.toPokemon(pokemonCrudRepositorio.save(poqemon));
     }
 
-
     @Override
     public void delete(int idPokemon){
         pokemonCrudRepositorio.deleteById(idPokemon);

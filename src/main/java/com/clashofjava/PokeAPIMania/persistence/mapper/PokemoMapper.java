@@ -1,7 +1,6 @@
 package com.clashofjava.PokeAPIMania.persistence.mapper;
 
-import com.clashofjava.PokeAPIMania.domain.Pokemo;
-import com.clashofjava.PokeAPIMania.persistence.entity.Pokemon;
+import com.clashofjava.PokeAPIMania.domain.Pokemon;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
@@ -15,7 +14,7 @@ public interface PokemoMapper {
             @Mapping(source = "nombrePokemon",target = "pokemonName"),
             @Mapping(source = "tipoPokemon",target = "pokemonType"),
     })
-    Pokemo toPokemo(Pokemon pokemon);
-    List<Pokemo> toPokemons(List<Pokemon> pokemons);
+    Pokemon toPokemo(com.clashofjava.PokeAPIMania.persistence.entity.Pokemon pokemon);
+    List<Pokemon> toPokemons(List<com.clashofjava.PokeAPIMania.persistence.entity.Pokemon> pokemons);
 
 }

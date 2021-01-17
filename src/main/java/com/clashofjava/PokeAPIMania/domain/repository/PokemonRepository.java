@@ -1,7 +1,7 @@
 package com.clashofjava.PokeAPIMania.domain.repository;
 
 import com.clashofjava.PokeAPIMania.domain.Pokemon;
-import com.clashofjava.PokeAPIMania.persistence.entity.Poqemon;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;

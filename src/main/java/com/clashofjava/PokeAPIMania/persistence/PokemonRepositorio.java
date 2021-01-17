@@ -6,6 +6,7 @@ import com.clashofjava.PokeAPIMania.persistence.crud.PokemonCrudRepositorio;
 import com.clashofjava.PokeAPIMania.persistence.entity.Poqemon;
 import com.clashofjava.PokeAPIMania.persistence.mapper.PokemonMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -25,13 +26,13 @@ public class PokemonRepositorio implements PokemonRepository {
     }
 
     @Override
-    public Optional<List<Pokemon>> getByPokemon(int pokemonId) {
+    public Optional<List<Pokemon>> getByPokemonId(int pokemonId) {
         return Optional.empty();
     }
 
     @Override
     public Optional<Pokemon> getPokemon(int pokemonId) {
-        return pokemonCrudRepositorio.findById(pokemonId).map(pokemon -> mapper.toPokemon(pokemon));
+       return pokemonCrudRepositorio.findById(pokemonId).map(pokemon -> mapper.toPokemon(pokemon));
     }
 
     @Override

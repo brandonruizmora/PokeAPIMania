@@ -2,6 +2,7 @@ package com.clashofjava.PokeAPIMania.web.controller;
 
 import com.clashofjava.PokeAPIMania.domain.Pokemon;
 import com.clashofjava.PokeAPIMania.domain.service.PokemonService;
+import com.clashofjava.PokeAPIMania.persistence.crud.PokemonCrudRepositorio;
 import com.clashofjava.PokeAPIMania.persistence.entity.Poqemon;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -23,9 +24,9 @@ public class PokemonController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Pokemon> getProduct(int productId) {
-        return pokemonService.getPokemon(productId)
-                .map(product -> new ResponseEntity<>(product, HttpStatus.OK))
+    public ResponseEntity<Pokemon> getPokemon(int pokemonId) {
+        return pokemonService.getPokemon(pokemonId)
+                .map(pokemon -> new ResponseEntity<>(pokemon, HttpStatus.OK))
                 .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 

@@ -29,8 +29,6 @@ public class PokemonRepositorio implements PokemonRepository {
         return Optional.empty();
     }
 
-
-
     @Override
     public Optional<Pokemon> getPokemon(int pokemonId) {
         return pokemonCrudRepositorio.findById(pokemonId).map(pokemon -> mapper.toPokemon(pokemon));
@@ -42,8 +40,10 @@ public class PokemonRepositorio implements PokemonRepository {
         return mapper.toPokemon(pokemonCrudRepositorio.save(poqemon));
     }
 
+
     @Override
-    public void delete(int pokemonId) {
-        pokemonCrudRepositorio.deleteById(pokemonId);
+    public void delete(int idPokemon){
+        pokemonCrudRepositorio.deleteById(idPokemon);
     }
+
 }

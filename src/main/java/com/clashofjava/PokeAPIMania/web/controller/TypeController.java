@@ -12,7 +12,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/types")
 public class TypeController {
-
     @Autowired
     private TypeService typeService;
 

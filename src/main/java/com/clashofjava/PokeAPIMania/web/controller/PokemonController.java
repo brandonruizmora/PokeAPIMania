@@ -13,7 +13,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/pokemons")
 public class PokemonController {
-    
     @Autowired
     private PokemonService pokemonService;
 

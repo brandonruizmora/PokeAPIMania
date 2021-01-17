@@ -63,6 +63,13 @@ public class PokemonController {
             return new ResponseEntity(HttpStatus.NOT_FOUND);
         }
     }
+
+    @PutMapping("/update")
+
+    public Pokemon update(@RequestBody Pokemon pokemon){
+        pokemonService.save(pokemon);
+        return pokemon;
+    }
 /*
     @PutMapping("/update")
     public ResponseEntity<Pokemon> updatePokemon(@RequestBody Pokemon pokemon){

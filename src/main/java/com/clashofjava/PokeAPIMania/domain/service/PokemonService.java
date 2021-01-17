@@ -1,5 +1,12 @@
 package com.clashofjava.PokeAPIMania.domain.service;
-
+/**
+ * Clase PokemonService
+ *
+ * Contiene informacion de los servicios del crud que se usan
+ *
+ * @author clash of java
+ * @version 1.0
+ */
 import com.clashofjava.PokeAPIMania.domain.Pokemon;
 import com.clashofjava.PokeAPIMania.domain.repository.PokemonRepository;
 import org.springframework.beans.factory.annotation.Autowired;

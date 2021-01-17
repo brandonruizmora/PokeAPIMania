@@ -1,5 +1,12 @@
 package com.clashofjava.PokeAPIMania.persistence.entity;
-
+/**
+ * Clase TiposPokemonPK
+ *
+ * Contiene los campos de la tabla TiposPokemonPK de la base de datos y a que tabla esta relacionada sus llaves compuestas
+ *
+ * @author clash of java
+ * @version 1.0
+ */
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import java.io.Serializable;

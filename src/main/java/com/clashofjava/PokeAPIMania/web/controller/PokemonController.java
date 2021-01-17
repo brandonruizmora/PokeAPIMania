@@ -1,14 +1,26 @@
-package com.clashofjava.PokeAPIMania.web.controller;
 
+package com.clashofjava.PokeAPIMania.web.controller;
+/**
+ * Clase PokemonController
+ *
+ * Contiene informacion del crud que puede hacer el API
+ *
+ * @author clash of java
+ * @version 1.0
+ */
 import com.clashofjava.PokeAPIMania.domain.Pokemon;
 import com.clashofjava.PokeAPIMania.domain.service.PokemonService;
+import com.clashofjava.PokeAPIMania.persistence.entity.Pokemon;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/pokemons")
@@ -18,6 +30,8 @@ public class PokemonController {
     private PokemonService pokemonService;
 
     @GetMapping("/all")
+    @ApiOperation("Get all the name of pokemons")
+    @ApiResponse(code = 200, message = "Ok")
     public List<Pokemon> getAll() {
         return pokemonService.getAll();
     }
@@ -30,6 +44,11 @@ public class PokemonController {
     }
 
     @PostMapping("/save")
+    @ApiOperation("Search a pokemon with an ID")
+    @ApiResponses({
+            @ApiResponse(code = 200, message = "OK"),
+            @ApiResponse(code = 404, message = "Pokemon Not found")
+    })
     public ResponseEntity<Pokemon> savePokemon(@RequestBody Pokemon pokemon) {
         Pokemon newPokemon = pokemonService.save(pokemon);
         return ResponseEntity.ok(newPokemon);

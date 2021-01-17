@@ -1,5 +1,12 @@
 package com.clashofjava.PokeAPIMania.persistence.entity;
-
+/**
+ * Clase Tipo
+ *
+ * Contiene los campos de la tabla Tipo de la base de datos y a que variables se asignan
+ *
+ * @author clash of java
+ * @version 1.0
+ */
 import javax.persistence.*;
 import java.util.List;
 

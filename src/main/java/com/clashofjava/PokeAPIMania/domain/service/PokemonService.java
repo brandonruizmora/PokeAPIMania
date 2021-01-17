@@ -44,6 +44,9 @@ public class PokemonService {
     public Pokemon updatePokemon(Pokemon pokemon){
         return pokemonRepository.update(pokemon);
     }
-
+    public void update(Pokemon pokemon, int pokemonId)
+    {
+        pokemonRepository.save(pokemon);
+    }
 
 }

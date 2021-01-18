@@ -1,7 +1,19 @@
 import React from "react";
 import img from "../img/poke5.jpg";
 
-const UploadPokemon = () => {
+const UploadPokemon = ({handleClickUpload}) => {
+  let pokemonName = "";
+  let pokemonDetail = "";
+  let pokemonEvolution = "";
+  const handleChangeNamePokemon = (event) => {
+    pokemonName = event.target.value;
+  }
+  const handleChangeDetailPokemon = (event) => {
+    pokemonDetail = event.target.value;
+  }
+  const handleChangeEvolutionPokemon = (event) => {
+    pokemonEvolution = event.target.value;
+  }
   return (
     <div
       className="modal fade"
@@ -28,7 +40,6 @@ const UploadPokemon = () => {
           </div>
           <div className="modal-body">
             <div className="container">
-              <form>
                 <div className="mb-3">
                   <label for="nombrePokemon" className="col-form-label">
                     Nombre:
@@ -37,6 +48,7 @@ const UploadPokemon = () => {
                     type="text"
                     className="form-control"
                     id="nombrePokemon"
+                    onChange={handleChangeNamePokemon}
                   />
                 </div>
                 <div className="mb-3">
@@ -46,6 +58,7 @@ const UploadPokemon = () => {
                   <textarea
                     className="form-control"
                     id="detailsPokemon"
+                    onChange={handleChangeDetailPokemon}
                   ></textarea>
                 </div>
                 <div className="mb-3">
@@ -92,8 +105,9 @@ const UploadPokemon = () => {
                     </div>
                   </div>
                 </div>
-                <button className="btn btn-outline-primary">Enviar</button>
-              </form>
+                <button className="btn btn-outline-primary"
+                onClick={() => handleClickUpload( pokemonName, pokemonDetail )}
+                >Enviar</button>
             </div>
           </div>
           <div className="modal-footer">

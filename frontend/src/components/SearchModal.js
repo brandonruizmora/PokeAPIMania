@@ -1,6 +1,6 @@
 import React from "react";
 
-const SearchModal = () => {
+const SearchModal = ({ pokemonInfo, handleClickPokemon }) => {
   return (
     <div
       className="modal fade"
@@ -39,32 +39,20 @@ const SearchModal = () => {
               </div>
               <div className="col-md-12 mb-3 mb-0">
                 <div class="list-group">
-                  <a
-                    href="#"
-                    class="list-group-item list-group-item-action active"
-                    aria-current="true"
-                    data-bs-toggle="modal"
-                    data-bs-target="#infopokemodal"
-                  >
-                    Charmander
-                  </a>
-                  <a href="#" class="list-group-item list-group-item-action">
-                    Dapibus ac facilisis in
-                  </a>
-                  <a href="#" class="list-group-item list-group-item-action">
-                    Morbi leo risus
-                  </a>
-                  <a href="#" class="list-group-item list-group-item-action">
-                    Porta ac consectetur ac
-                  </a>
-                  <a
-                    href="#"
-                    class="list-group-item list-group-item-action disabled"
-                    tabindex="-1"
-                    aria-disabled="true"
-                  >
-                    Vestibulum at eros
-                  </a>
+                  {pokemonInfo.map((pokemon, idx) => {
+                    return (
+                      <li
+                        key={idx}
+                        className="list-group-item list-group-item-action cursor"
+                        aria-current="true"
+                        data-bs-toggle="modal"
+                        data-bs-target="#infopokemodal"
+                        onClick={() => handleClickPokemon(pokemon)}
+                      >
+                        {pokemon.pokemon}
+                      </li>
+                    );
+                  })}
                 </div>
               </div>
             </div>

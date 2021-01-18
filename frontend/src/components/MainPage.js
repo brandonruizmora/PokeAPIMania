@@ -5,6 +5,7 @@ import InfoPokemonModal from "./InfoPokemonModal";
 import TyposModal from "./TypeosModal";
 import ContactModal from "./ContactModal";
 import UploadPokemon from "./UploadPokemon";
+import EditPokemon from "./EditPokemon";
 
 const MainPage = () => {
   const [pokemonInfo, setpokemonInfo] = useState([]);
@@ -13,6 +14,14 @@ const MainPage = () => {
   const handleClickUpload = (pokemonName, pokemonDetail) => {
     console.log(pokemonName, pokemonDetail);
     handleSaveAPI(pokemonName, pokemonDetail);
+  };
+
+  const handleClickEdit = (pokemonId, pokemonName, pokemonDetail) => {
+    handleEditPokemonAPI(pokemonId, pokemonName, pokemonDetail);
+  };
+
+  const handleClickEditPokemon = (pokeinfo) => {
+    setpokemonData(pokeinfo);
   };
 
   const handleClickSearch = () => {
@@ -27,9 +36,42 @@ const MainPage = () => {
     handleGetPokemonAPI(pokemon.pokemonId);
   };
 
+  const handleResponseEditPokemonAPI = () => {
+    handleGetAllAPI();
+  };
+
+  const handleEditPokemonAPI = (pokemonId, pokemonName, pokemonDetail) => {
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    var raw = JSON.stringify({
+      pokemonId: pokemonId,
+      pokemon: pokemonName,
+      detail: pokemonDetail,
+      evolution: false,
+    });
+
+    var requestOptions = {
+      method: "PUT",
+      headers: myHeaders,
+      body: raw,
+      redirect: "follow",
+    };
+
+    const proxyurl = "https://cors-anywhere.herokuapp.com/";
+    const url =
+      "https://cryptic-journey-63259.herokuapp.com/pokeapimania/api/pokemons/update/" +
+      pokemonId;
+
+    fetch(proxyurl + url, requestOptions)
+      .then((response) => response.text())
+      .then((result) => handleResponseEditPokemonAPI(result))
+      .catch((error) => console.log("error", error));
+  };
+
   const handleResultDeletePokemonAPI = () => {
     handleGetAllAPI();
-  }
+  };
 
   const handleDeletePokemonAPI = (pokemonId) => {
     var requestOptions = {
@@ -183,6 +225,11 @@ const MainPage = () => {
       <InfoPokemonModal
         pokemonData={pokemonData}
         handleClickDeletePokemon={handleClickDeletePokemon}
+        handleClickEditPokemon={handleClickEditPokemon}
+      />
+      <EditPokemon
+        pokemonData={pokemonData}
+        handleClickEdit={handleClickEdit}
       />
       <TyposModal />
       <ContactModal />

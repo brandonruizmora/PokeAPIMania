@@ -1,7 +1,7 @@
 import React from "react";
 import img from "../img/poke5.jpg";
 
-const UploadPokemon = ({handleClickUpload}) => {
+const EditPokemon = ({pokemonData, handleClickEdit}) => {
   let pokemonName = "";
   let pokemonDetail = "";
   let pokemonEvolution = "";
@@ -17,7 +17,7 @@ const UploadPokemon = ({handleClickUpload}) => {
   return (
     <div
       className="modal fade"
-      id="uploadmodal"
+      id="editpokemodal"
       tabindex="-1"
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
@@ -26,7 +26,7 @@ const UploadPokemon = ({handleClickUpload}) => {
         <div className="modal-content bg-dark text-light">
           <div className="modal-header">
             <h5 className="modal-title display-4" id="contactoLabel">
-              Subiendo un pokémon...
+              Editando un pokémon...
             </h5>
             <a type="button" data-bs-dismiss="modal" aria-label="Close">
               <span className="fa-layers fa-fw">
@@ -49,6 +49,7 @@ const UploadPokemon = ({handleClickUpload}) => {
                     className="form-control"
                     id="nombrePokemon"
                     onChange={handleChangeNamePokemon}
+                    defaultValue={pokemonData.pokemon}
                   />
                 </div>
                 <div className="mb-3">
@@ -59,6 +60,7 @@ const UploadPokemon = ({handleClickUpload}) => {
                     className="form-control"
                     id="detailsPokemon"
                     onChange={handleChangeDetailPokemon}
+                    defaultValue={pokemonData.detail}
                   ></textarea>
                 </div>
                 <div className="mb-3">
@@ -107,7 +109,7 @@ const UploadPokemon = ({handleClickUpload}) => {
                 </div>
                 <button className="btn btn-outline-primary"
                 data-bs-dismiss="modal"
-                onClick={() => handleClickUpload( pokemonName, pokemonDetail )}
+                onClick={() => handleClickEdit(pokemonData.pokemonId, pokemonName, pokemonDetail )}
                 >Enviar</button>
             </div>
           </div>
@@ -126,4 +128,4 @@ const UploadPokemon = ({handleClickUpload}) => {
   );
 };
 
-export default UploadPokemon;
+export default EditPokemon;

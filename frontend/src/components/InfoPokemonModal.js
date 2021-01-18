@@ -1,6 +1,6 @@
 import React from "react";
 
-const InfoPokemonModal = ({ pokemonData, handleClickDeletePokemon }) => {
+const InfoPokemonModal = ({ pokemonData, handleClickDeletePokemon, handleClickEditPokemon }) => {
   return (
     <div
       className="modal fade"
@@ -51,7 +51,14 @@ const InfoPokemonModal = ({ pokemonData, handleClickDeletePokemon }) => {
             >
               Eliminar
             </button>
-            <button type="button" className="btn btn-primary">
+            <button 
+            type="button" 
+            className="btn btn-primary"
+            data-bs-dismiss="modal"
+            data-bs-toggle="modal"
+            data-bs-target="#editpokemodal"
+            onClick={() => handleClickEditPokemon(pokemonData)}
+            >
               Editar
             </button>
             <button

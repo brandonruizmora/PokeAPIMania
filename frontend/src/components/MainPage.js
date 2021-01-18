@@ -11,6 +11,13 @@ const MainPage = () => {
   const [pokemonInfo, setpokemonInfo] = useState([]);
   const [pokemonData, setpokemonData] = useState({});
 
+  const arrPoke = [];
+
+  const setSearchedPokemon = (pokemon) => {
+    arrPoke.push(pokemon)
+    setpokemonInfo(arrPoke)
+  };
+
   const handleClickUpload = (pokemonName, pokemonDetail) => {
     console.log(pokemonName, pokemonDetail);
     handleSaveAPI(pokemonName, pokemonDetail);
@@ -220,6 +227,7 @@ const MainPage = () => {
       <SearchModal
         pokemonInfo={pokemonInfo}
         handleClickPokemon={handleClickPokemon}
+        setSearchedPokemon={setSearchedPokemon}
       />
       <AboutModal />
       <InfoPokemonModal

@@ -1,6 +1,21 @@
 import React from "react";
 
-const SearchModal = ({ pokemonInfo, handleClickPokemon }) => {
+const SearchModal = ({ pokemonInfo, handleClickPokemon, setSearchedPokemon }) => {
+
+  let searchPokemon = '';
+
+  const handleChangeSearch = (event) => {
+    searchPokemon = event.target.value;
+  }
+
+  const handleSearchM = () => {
+    pokemonInfo.map((pokemon) => {
+      if(pokemon.pokemon === searchPokemon){
+        setSearchedPokemon(pokemon);
+      }
+    });
+  }
+
   return (
     <div
       className="modal fade"
@@ -28,14 +43,14 @@ const SearchModal = ({ pokemonInfo, handleClickPokemon }) => {
           <div className="modal-body">
             <div className="row">
               <div className="col-md-12 mb-3 mb-0">
-                <form>
                   <div className="mb-3 d-flex">
-                    <input type="text" className="form-control" />
-                    <button className="btn btn-outline-light ms-1">
+                    <input type="text" className="form-control" onChange={handleChangeSearch} />
+                    <button className="btn btn-outline-light ms-1"
+                    onClick={() => handleSearchM()}
+                    >
                       <i className="fas fa-search"></i>
                     </button>
                   </div>
-                </form>
               </div>
               <div className="col-md-12 mb-3 mb-0">
                 <div class="list-group">

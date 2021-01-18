@@ -14,6 +14,13 @@ const UploadPokemon = ({handleClickUpload}) => {
   const handleChangeEvolutionPokemon = (event) => {
     pokemonEvolution = event.target.value;
   }
+  const handleClickUploadM = () => {
+    if(pokemonName !== "" && pokemonDetail !== "") {
+      handleClickUpload(pokemonName, pokemonDetail);
+    }else{
+      alert('Ingrese datos de nombre y detalles')
+    }
+  }
   return (
     <div
       className="modal fade"
@@ -49,6 +56,7 @@ const UploadPokemon = ({handleClickUpload}) => {
                     className="form-control"
                     id="nombrePokemon"
                     onChange={handleChangeNamePokemon}
+                    required
                   />
                 </div>
                 <div className="mb-3">
@@ -59,6 +67,7 @@ const UploadPokemon = ({handleClickUpload}) => {
                     className="form-control"
                     id="detailsPokemon"
                     onChange={handleChangeDetailPokemon}
+                    required
                   ></textarea>
                 </div>
                 <div className="mb-3">
@@ -107,7 +116,7 @@ const UploadPokemon = ({handleClickUpload}) => {
                 </div>
                 <button className="btn btn-outline-primary"
                 data-bs-dismiss="modal"
-                onClick={() => handleClickUpload( pokemonName, pokemonDetail )}
+                onClick={() => handleClickUploadM( pokemonName, pokemonDetail )}
                 >Enviar</button>
             </div>
           </div>

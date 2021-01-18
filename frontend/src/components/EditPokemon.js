@@ -14,6 +14,13 @@ const EditPokemon = ({pokemonData, handleClickEdit}) => {
   const handleChangeEvolutionPokemon = (event) => {
     pokemonEvolution = event.target.value;
   }
+  const handleClickEditM = (pokemonId, pokemonName, pokemonDetail) => {
+    if(pokemonId !== "" && pokemonName !== "" && pokemonDetail !== "") {
+      handleClickEdit(pokemonId, pokemonName, pokemonDetail);
+    }else{
+      alert('Ingrese datos de nombre y detalles')
+    }
+  }
   return (
     <div
       className="modal fade"
@@ -50,6 +57,7 @@ const EditPokemon = ({pokemonData, handleClickEdit}) => {
                     id="nombrePokemon"
                     onChange={handleChangeNamePokemon}
                     defaultValue={pokemonData.pokemon}
+                    required
                   />
                 </div>
                 <div className="mb-3">
@@ -61,6 +69,7 @@ const EditPokemon = ({pokemonData, handleClickEdit}) => {
                     id="detailsPokemon"
                     onChange={handleChangeDetailPokemon}
                     defaultValue={pokemonData.detail}
+                    required
                   ></textarea>
                 </div>
                 <div className="mb-3">
@@ -109,7 +118,7 @@ const EditPokemon = ({pokemonData, handleClickEdit}) => {
                 </div>
                 <button className="btn btn-outline-primary"
                 data-bs-dismiss="modal"
-                onClick={() => handleClickEdit(pokemonData.pokemonId, pokemonName, pokemonDetail )}
+                onClick={() => handleClickEditM(pokemonData.pokemonId, pokemonName, pokemonDetail )}
                 >Enviar</button>
             </div>
           </div>

@@ -4,6 +4,7 @@ import com.clashofjava.PokeAPIMania.domain.Pokemon;
 import com.clashofjava.PokeAPIMania.domain.service.PokemonService;
 import com.clashofjava.PokeAPIMania.persistence.crud.PokemonCrudRepositorio;
 import com.clashofjava.PokeAPIMania.persistence.entity.Poqemon;
+import com.clashofjava.PokeAPIMania.web.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,6 +15,8 @@ import java.util.List;
 @RestController
 @RequestMapping("/pokemons")
 public class PokemonController {
+    @Autowired
+    private PokemonCrudRepositorio pokemonCrudRepositorio;
     
     @Autowired
     private PokemonService pokemonService;
@@ -41,18 +44,21 @@ public class PokemonController {
         pokemonService.delete(pokemonId);
         return ResponseEntity.ok(null);
     }
-/*
-    @PutMapping("/update")
-    public ResponseEntity<Pokemon> updatePokemon(@RequestBody Pokemon pokemon){
-        Optional<Pokemon> optionalPokemon = pokemonService.findById(pokemon.getPokemonId());
-        if(optionalPokemon.isPresent()){
-            Pokemon updatePokemon = optionalPokemon.get();
-            updatePokemon.setPokemon(pokemon.getPokemon())
-            pokemonService.save(updatePokemon);
-            return ResponseEntity.ok(updatePokemon);
-        }else{
-            return ResponseEntity.notFound().build();
-        }
+
+    @PutMapping("/update/{pokemonid}")
+    public ResponseEntity<Pokemon> updatePokemon(@PathVariable(value = "pokemonid") int pokemonId,
+                                                 @RequestBody Pokemon nuevoPokemon) {
+
+        Poqemon poqemon = pokemonCrudRepositorio.findById(pokemonId)
+                .orElseThrow(() -> new ResourceNotFoundException("Pokemon", "pokemonid", pokemonId));
+
+        poqemon.setIdPokemon(nuevoPokemon.getPokemonId());
+        poqemon.setPokemon(nuevoPokemon.getPokemon());
+        poqemon.setDetalle(nuevoPokemon.getDetail());
+        poqemon.setEvolucion(nuevoPokemon.getEvolution());
+
+        Pokemon pokemonActualizado= pokemonService.save(nuevoPokemon);
+        return ResponseEntity.ok(pokemonActualizado);
     }
- */
+
 }

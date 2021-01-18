@@ -37,7 +37,7 @@ const TyposModal = () => {
                     <div className="card-body">
                       <h5 className="card-title">Planta</h5>
                       <p className="card-text">
-                        Los pokémones tipo planta bla bla bla.
+                        Los pokémones tipo planta...
                       </p>
                     </div>
                   </a>
@@ -49,7 +49,7 @@ const TyposModal = () => {
                     <div className="card-body">
                       <h5 className="card-title">Fuego</h5>
                       <p className="card-text">
-                        Los pokémones tipo fuego bla bla bla.
+                        Los pokémones tipo fuego...
                       </p>
                     </div>
                   </a>
@@ -60,7 +60,7 @@ const TyposModal = () => {
                     <div className="card-body">
                       <h5 className="card-title">Agua</h5>
                       <p className="card-text">
-                        Los pokémones tipo agua bla bla bla.
+                        Los pokémones tipo agua...
                       </p>
                     </div>
                   </a>
@@ -71,7 +71,7 @@ const TyposModal = () => {
                     <div className="card-body">
                       <h5 className="card-title">Metal</h5>
                       <p className="card-text">
-                        Los pokémones tipo Metal bla bla bla.
+                        Los pokémones tipo Metal...
                       </p>
                     </div>
                   </a>
@@ -82,7 +82,7 @@ const TyposModal = () => {
                     <div className="card-body">
                       <h5 className="card-title">Lucha</h5>
                       <p className="card-text">
-                        Los pokémones tipo Lucha bla bla bla.
+                        Los pokémones tipo Lucha...
                       </p>
                     </div>
                   </a>

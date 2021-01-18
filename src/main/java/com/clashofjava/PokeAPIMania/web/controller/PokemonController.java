@@ -33,6 +33,12 @@ public class PokemonController {
                 .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 
+    @GetMapping("/pokemon/{pokemonid}")
+    public Poqemon getPokemonId(@PathVariable(value = "pokemonid") int pokemonId) {
+        return pokemonCrudRepositorio.findById(pokemonId)
+                .orElseThrow(() -> new ResourceNotFoundException("Pokemon", "pokemonid", pokemonId));
+    }
+
     @PostMapping("/save")
     public ResponseEntity<Pokemon> savePokemon(@RequestBody Pokemon pokemon) {
         Pokemon newPokemon = pokemonService.save(pokemon);

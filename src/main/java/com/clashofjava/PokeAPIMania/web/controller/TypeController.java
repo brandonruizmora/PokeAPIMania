@@ -33,6 +33,13 @@ public class TypeController {
                 .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 
+    @GetMapping("/type/{typeid}")
+    public Tipo getTypeId(@PathVariable(value = "typeid") int typeId) {
+        return typeCrudRepositorio.findById(typeId)
+                .orElseThrow(() -> new ResourceNotFoundException("Type", "typeid", typeId));
+    }
+
+
     @PostMapping("/save")
     public ResponseEntity<Types> savePokemon(@RequestBody Types type) {
         Types newType = typeService.save(type);

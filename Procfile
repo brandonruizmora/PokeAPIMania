@@ -1,1 +1,1 @@
-web: java -jar -Dspring.profiles.active build/libs/PokeAPIMania-1.0.jar
+web: java -jar -Dspring.profiles.active=dev build/libs/PokeAPIMania-1.0.jar

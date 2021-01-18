@@ -1,0 +1,1 @@
+web: java -jar -Dspring.profiles.active build/libs/PokeAPIMania-1.0.jar
